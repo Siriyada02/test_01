@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.9.13 on win32)" generated="2025-08-07T00:25:53.250633" rpa="false" schemaversion="5">
+<suite id="s1" name="Test01" source="C:\Users\User\Downloads\test\test_01\test01.robot">
+<test id="s1-t1" name="Find Common Items And Sort" line="5">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-08-07T00:25:53.288642" level="INFO">${list_a} = ['1', '2', '3', '5', '6', '8', '9']</msg>
+<var>${list_a}</var>
+<arg>1</arg>
+<arg>2</arg>
+<arg>3</arg>
+<arg>5</arg>
+<arg>6</arg>
+<arg>8</arg>
+<arg>9</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-08-07T00:25:53.288642" elapsed="0.000000"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-08-07T00:25:53.289637" level="INFO">${list_b} = ['3', '2', '1', '5', '6', '0']</msg>
+<var>${list_b}</var>
+<arg>3</arg>
+<arg>2</arg>
+<arg>1</arg>
+<arg>5</arg>
+<arg>6</arg>
+<arg>0</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-08-07T00:25:53.288642" elapsed="0.000995"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-08-07T00:25:53.289637" level="INFO">${common} = ['1', '2', '3', '5', '6']</msg>
+<var>${common}</var>
+<arg>sorted(set(${list_a}) &amp; set(${list_b}))</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-08-07T00:25:53.289637" elapsed="0.001003"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-08-07T00:25:53.290640" level="INFO">✅ Common items (sorted): ['1', '2', '3', '5', '6']</msg>
+<arg>✅ Common items (sorted): ${common}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-08-07T00:25:53.290640" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>✅ Common items (sorted): ${common}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-08-07T00:25:53.290640" elapsed="0.001507"/>
+</kw>
+<status status="PASS" start="2025-08-07T00:25:53.287564" elapsed="0.004583"/>
+</test>
+<status status="PASS" start="2025-08-07T00:25:53.253259" elapsed="0.039820"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test01">Test01</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-08-07T00:25:53.285644" level="ERROR">Error in file 'C:\Users\User\Downloads\test\test_01\test01.robot' on line 2: Importing library 'find_common' failed: ModuleNotFoundError: No module named 'find_common'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\User\AppData\Local\Programs\Python\Python39\Scripts\robot.exe
+  C:\Users\User\AppData\Local\Programs\Python\Python39\python39.zip
+  C:\Users\User\AppData\Local\Programs\Python\Python39\DLLs
+  C:\Users\User\AppData\Local\Programs\Python\Python39\lib
+  C:\Users\User\AppData\Local\Programs\Python\Python39
+  C:\Users\User\AppData\Roaming\Python\Python39\site-packages
+  C:\Users\User\AppData\Roaming\Python\Python39\site-packages\win32
+  C:\Users\User\AppData\Roaming\Python\Python39\site-packages\win32\lib
+  C:\Users\User\AppData\Roaming\Python\Python39\site-packages\Pythonwin
+  C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages</msg>
+</errors>
+</robot>
